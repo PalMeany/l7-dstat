@@ -5,7 +5,7 @@ Demo: unhittable.club
 # How to start?
 1. Install nginx
 2. create a new text file in /etc/nginx/sites-enabled
-3. Paste this in new file
+3. Paste this in new file (change domain.com to your domain)
 ```
 server {
     listen 80;
@@ -18,7 +18,6 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
     location /nginx_status {
-        # Turn on stats
         stub_status on;
         access_log off;
     }
