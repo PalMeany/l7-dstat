@@ -30,7 +30,7 @@ server {
 6. Create new project
 `npx create-next-app@latest .`
 7. Copy files from archive to the project folder overwriting everything
-8. Run these commands:
+8. Run these commands (you might also need to install some dependencies. read error log for dependencies and install them if needed):
 ```
 npm run build
 npm start
