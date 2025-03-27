@@ -22,6 +22,6 @@ export default function RootLayout({
   )
 }
 
-
+/* With love from Pal */
 
 import './globals.css'

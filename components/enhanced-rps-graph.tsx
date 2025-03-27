@@ -90,7 +90,7 @@ const EnhancedRpsGraph = ({ data }: RpsGraphProps) => {
       const y = e.clientY - rect.top
 
       // Calculate graph dimensions
-      const padding = { top: 20, right: 20, bottom: 30, left: 50 }
+      const padding = { top: 20, right: 20, bottom: 40, left: 20 }
       const graphWidth = dimensions.width - padding.left - padding.right
 
       // Check if mouse is within graph area
@@ -174,7 +174,7 @@ const EnhancedRpsGraph = ({ data }: RpsGraphProps) => {
     }
 
     // Calculate graph dimensions
-    const padding = { top: 20, right: 20, bottom: 30, left: 50 }
+    const padding = { top: 20, right: 20, bottom: 40, left: 20 }
     const graphWidth = dimensions.width - padding.left - padding.right
     const graphHeight = dimensions.height - padding.top - padding.bottom
 
@@ -200,7 +200,7 @@ const EnhancedRpsGraph = ({ data }: RpsGraphProps) => {
       ctx.fillStyle = "#33ff33"
       ctx.font = "12px monospace"
       ctx.textAlign = "right"
-      ctx.fillText(`${i * yStep}`, padding.left - 5, y + 4)
+      ctx.fillText(``, padding.left - 5, y + 4)
     }
 
     // Vertical grid lines - adjust for 60 seconds
