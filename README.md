@@ -1,5 +1,5 @@
 # l7-dstat
-Overcomplicated Layer 7 DSTAT website made by v0 dev
+Overcomplicated Layer 7 DSTAT website made by v0 dev.
 Demo: unhittable.club
 
 # How to start?
