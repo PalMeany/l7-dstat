@@ -21,11 +21,17 @@ body {
   font-feature-settings: "tnum" on, "lnum" on;
 }
 
+/* Enhanced glow box with smoother animation */
 .glow-box {
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
-  animation: pulse 3s infinite alternate;
+  animation: enhanced-pulse 4s infinite alternate ease-in-out;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-box:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.7);
 }
 
 .glow-box::after {
@@ -43,13 +49,30 @@ body {
     rgba(0, 255, 0, 0)
   );
   transform: rotate(30deg);
-  animation: shimmer 6s infinite;
+  animation: shimmer 8s infinite;
   pointer-events: none;
+}
+
+/* Enhanced main card */
+.main-card {
+  animation: card-glow 5s infinite alternate ease-in-out;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  border-width: 2px;
+}
+
+.enhanced-panel {
+  transition: all 0.3s ease;
 }
 
 .stats-counter {
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.stats-counter:hover {
+  transform: translateY(-2px);
 }
 
 .stats-counter::after {
@@ -71,12 +94,32 @@ body {
   pointer-events: none;
 }
 
-@keyframes pulse {
+/* Status indicator styling */
+.status-indicator {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+/* Enhanced animations */
+@keyframes enhanced-pulse {
   0% {
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
   }
   100% {
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+  }
+}
+
+@keyframes card-glow {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
   }
 }
 
@@ -99,18 +142,29 @@ body {
   }
 }
 
-@keyframes value-change {
+/* Improved value change animations */
+@keyframes value-increase {
   0% {
     transform: scale(1);
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    filter: brightness(1);
   }
-  50% {
+  20% {
     transform: scale(1.05);
-    text-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 30px rgba(0, 255, 0, 0.8);
+    filter: brightness(1.3);
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.9), 0 0 25px rgba(0, 255, 0, 0.6);
+  }
+  40% {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+  }
+  60% {
+    transform: scale(1.01);
+    filter: brightness(1.2);
+    text-shadow: 0 0 12px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.5);
   }
   100% {
     transform: scale(1);
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    filter: brightness(1);
   }
 }
 
@@ -118,14 +172,35 @@ body {
   0% {
     transform: scale(1);
     opacity: 1;
+    filter: brightness(1);
   }
-  50% {
+  30% {
     transform: scale(0.95);
-    opacity: 0.8;
+    opacity: 0.85;
+    filter: brightness(0.9);
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+  }
+  60% {
+    transform: scale(0.98);
+    opacity: 0.9;
+    filter: brightness(0.95);
   }
   100% {
     transform: scale(1);
     opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+@keyframes panel-pulse {
+  0% {
+    border-color: rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    border-color: rgba(0, 255, 0, 0.9);
+  }
+  100% {
+    border-color: rgba(0, 255, 0, 0.5);
   }
 }
 
@@ -153,16 +228,16 @@ body {
   animation: text-glow 3s infinite;
 }
 
-.animate-value-change {
-  animation: value-change 0.8s ease-in-out;
+.animate-value-increase {
+  animation: value-increase 1s cubic-bezier(0.2, 0, 0.3, 1);
 }
 
 .animate-value-decrease {
-  animation: value-decrease 0.8s ease-in-out;
+  animation: value-decrease 1s cubic-bezier(0.2, 0, 0.3, 1);
 }
 
-.animate-status-pulse {
-  animation: status-pulse 2s infinite;
+.animate-panel-pulse {
+  animation: panel-pulse 0.8s ease-in-out;
 }
 
 .animate-pulse-fast {
@@ -174,5 +249,6 @@ canvas {
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
+  transition: opacity 0.3s ease;
 }
 

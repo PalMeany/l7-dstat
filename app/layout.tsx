@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Layer7 DSTAT",
-  description: "Overcomplicated Layer 7 DSTAT website made by v0 dev",
+  description: "Overcomplicated Layer 7 DSTAT website made by v0 dev, version 1.1",
 }
 
 export default function RootLayout({

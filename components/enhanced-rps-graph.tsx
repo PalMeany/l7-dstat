@@ -217,7 +217,7 @@ const EnhancedRpsGraph = ({ data }: RpsGraphProps) => {
     ctx.fillStyle = "#33ff33"
     ctx.font = "12px monospace"
     ctx.textAlign = "center"
-    ctx.fillText("Time (hh:mm:ss)", padding.left + graphWidth / 2, dimensions.height - 8)
+    ctx.fillText("Time (hh:mm:ss)", padding.left + graphWidth / 2, dimensions.height - 5)
 
     // Draw time markers with actual timestamps
     // We'll show fewer time markers to avoid overcrowding
