@@ -34,6 +34,8 @@ server {
 7. Copy files from archive to the project folder overwriting everything
 8. Run these commands (you might also need to install some dependencies. read error log for dependencies and install them if needed):
 ```
+npm install tailwind-merge --force
+npm audit fix --force
 npm run build
 npm start
 ```
