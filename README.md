@@ -30,6 +30,7 @@ server {
 `curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash`
 6. Create new project
 `npx create-next-app@latest .`
+(1. Yes, 2. Yes, 3. Yes, 4. No, 5. Yes, 6. Yes, 7. No)
 7. Copy files from archive to the project folder overwriting everything
 8. Run these commands (you might also need to install some dependencies. read error log for dependencies and install them if needed):
 ```
