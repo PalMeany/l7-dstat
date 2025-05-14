@@ -42,7 +42,7 @@ export default function Home() {
 
     const fetchNginxData = async () => {
       try {
-        const response = await fetch("/api/nginx-status", {
+        const response = await fetch("/nginx_status", {
           method: "GET",
           cache: "no-store",
         })
