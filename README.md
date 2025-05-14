@@ -3,7 +3,7 @@ Overcomplicated Layer 7 DSTAT website made by v0 dev.
 Demo: https://unhittable.club
 ![image](https://github.com/user-attachments/assets/af08c704-ca0f-48c0-8e29-364aaf07c6ec)
 
-# How to start?
+# How to start? (Ubuntu)
 1. Install nginx
 2. create a new text file in /etc/nginx/sites-enabled
 3. Paste this in new file (change domain.com to your domain)
