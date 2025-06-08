@@ -28,6 +28,12 @@ server {
 4. Download repository as Zip and unarchive.
 5. Install Node JS
 `curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash`
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+`nvm install node`
 6. Create new project
 `npx create-next-app@latest .`
 (1. Yes, 2. Yes, 3. Yes, 4. No, 5. Yes, 6. Yes, 7. No)
